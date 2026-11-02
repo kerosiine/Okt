@@ -1,0 +1,3037 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Октябрьский райисполком — Гомельская область</title>
+<style>
+    /* ============================================================
+       ДИЗАЙН-СИСТЕМА (обновлённая)
+       ============================================================ */
+    :root {
+        --primary: #1a4d8f;
+        --primary-dark: #0f3460;
+        --primary-light: #e8eff9;
+        --accent: #e8a33d;
+        --accent-dark: #c9821f;
+        --accent-light: #fdf3e3;
+        --bg: #f2f5fa;
+        --surface: #ffffff;
+        --surface-alt: #f7f9fc;
+        --text: #1b2430;
+        --text-muted: #6b7280;
+        --text-soft: #3c4654;
+        --border: #dde4ee;
+        --success: #16a34a;
+        --warning: #f59e0b;
+        --danger: #dc2626;
+
+        --radius-sm: 8px;
+        --radius: 14px;
+        --radius-lg: 20px;
+        --radius-pill: 999px;
+
+        --shadow-sm: 0 1px 3px rgba(16,32,54,0.06);
+        --shadow: 0 4px 14px rgba(16,32,54,0.07);
+        --shadow-md: 0 8px 24px rgba(16,32,54,0.10);
+        --shadow-lg: 0 16px 44px rgba(16,32,54,0.16);
+
+        --t-fast: 0.15s ease;
+        --t: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        --t-slow: 0.45s ease;
+
+        --font-display: 'Georgia', 'Times New Roman', serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background:
+            radial-gradient(circle at 100% 0%, rgba(232,163,61,0.06), transparent 40%),
+            radial-gradient(circle at 0% 100%, rgba(26,77,143,0.06), transparent 40%),
+            var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.125em;
+        flex-shrink: 0;
+    }
+    .icon-sm { width: 0.9em; height: 0.9em; }
+    .icon-lg { width: 1.5em; height: 1.5em; }
+    .icon-xl { width: 2em; height: 2em; }
+
+    :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: var(--radius-sm);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .section-anchor { scroll-margin-top: 140px; }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .fade-in { animation: fadeInUp 0.5s ease both; }
+
+    /* Плавное появление секций при скролле */
+    .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       ШАПКА
+       ============================================================ */
+    header {
+        background: rgba(255,255,255,0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 1px 0 rgba(16,32,54,0.06), var(--shadow-sm);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .top-bar {
+        background: linear-gradient(90deg, var(--primary-dark), var(--primary) 55%, #2a6ab3);
+        color: #fff;
+        padding: 7px 0;
+        font-size: 12.5px;
+        letter-spacing: 0.2px;
+    }
+    .top-bar .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+    }
+    .top-bar span {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap;
+        opacity: 0.95;
+    }
+    .top-bar .icon { color: var(--accent); }
+
+    .main-header { padding: 14px 0; }
+    .main-header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .logo { display: flex; align-items: center; gap: 14px; }
+    .logo-icon {
+        width: 52px;
+        height: 52px;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 60%, #2a6ab3 100%);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        font-family: var(--font-display);
+        box-shadow: 0 6px 16px rgba(26,77,143,0.30);
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+        transition: transform var(--t);
+    }
+    .logo-icon::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.25));
+    }
+    .logo:hover .logo-icon { transform: rotate(-4deg) scale(1.04); }
+    .logo-text h1 {
+        font-size: 15px;
+        color: var(--primary);
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: 0.1px;
+    }
+    .logo-text p { font-size: 12px; color: var(--text-muted); }
+    .logo-text p::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 2px;
+        background: var(--accent);
+        vertical-align: middle;
+        margin-right: 6px;
+        border-radius: 2px;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 4px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    nav a {
+        text-decoration: none;
+        color: var(--text-soft);
+        padding: 8px 13px;
+        border-radius: var(--radius-pill);
+        font-size: 13.5px;
+        font-weight: 500;
+        transition: background var(--t-fast), color var(--t-fast), box-shadow var(--t-fast);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap;
+        position: relative;
+    }
+    nav a:hover {
+        background: var(--primary-light);
+        color: var(--primary);
+    }
+    nav a.active { background: var(--primary); color: #fff; box-shadow: 0 4px 12px rgba(26,77,143,0.28); }
+    .nav-auth {
+        background: linear-gradient(135deg, var(--primary), #2a6ab3);
+        color: #fff !important;
+        box-shadow: 0 4px 12px rgba(26,77,143,0.25);
+    }
+    .nav-auth:hover {
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary)) !important;
+        color: #fff !important;
+        box-shadow: 0 6px 18px rgba(26,77,143,0.35);
+    }
+
+    .nav-user { display: flex; align-items: center; gap: 8px; }
+    .user-badge {
+        background: var(--accent-light);
+        padding: 5px 13px;
+        border-radius: var(--radius-pill);
+        font-size: 12.5px;
+        color: var(--accent-dark);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid rgba(232,163,61,0.35);
+    }
+    .logout-btn {
+        background: var(--danger);
+        color: #fff;
+        border: none;
+        padding: 7px 13px;
+        border-radius: var(--radius-pill);
+        cursor: pointer;
+        font-size: 12.5px;
+        font-weight: 600;
+        transition: background var(--t-fast), transform var(--t-fast);
+        font-family: inherit;
+    }
+    .logout-btn:hover { background: #b91c1c; transform: translateY(-1px); }
+
+    /* ============================================================
+       ГЕРОЙ
+       ============================================================ */
+    .hero {
+        background:
+            radial-gradient(circle at 20% 20%, rgba(232,163,61,0.16), transparent 42%),
+            radial-gradient(circle at 85% 80%, rgba(255,255,255,0.10), transparent 45%),
+            linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #26608f 100%);
+        color: #fff;
+        padding: 64px 0 72px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+        background-size: 46px 46px;
+        mask-image: radial-gradient(circle at center, black 30%, transparent 78%);
+        -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 78%);
+        pointer-events: none;
+    }
+    .hero::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: var(--bg);
+        clip-path: ellipse(70% 100% at 50% 100%);
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .region-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255,255,255,0.12);
+        padding: 7px 18px;
+        border-radius: var(--radius-pill);
+        font-size: 12.5px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(232,163,61,0.55);
+        color: #fbe6c2;
+        animation: fadeInUp 0.5s ease both;
+        backdrop-filter: blur(4px);
+    }
+    .region-badge .icon { color: var(--accent); }
+    .hero h2 {
+        font-size: 34px;
+        margin-bottom: 14px;
+        line-height: 1.22;
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        animation: fadeInUp 0.5s ease 0.05s both;
+        text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .hero h2::after {
+        content: '';
+        display: block;
+        width: 74px;
+        height: 4px;
+        margin: 18px auto 0;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--accent), #f5c877);
+    }
+    .hero p {
+        font-size: 15.5px;
+        opacity: 0.92;
+        max-width: 680px;
+        margin: 0 auto 30px;
+        animation: fadeInUp 0.5s ease 0.1s both;
+    }
+    .hero-buttons {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: fadeInUp 0.5s ease 0.15s both;
+    }
+
+    /* ============================================================
+       КНОПКИ
+       ============================================================ */
+    .btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: var(--radius-pill);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        font-family: inherit;
+        line-height: 1.2;
+        letter-spacing: 0.1px;
+    }
+    .btn:active { transform: translateY(1px) scale(0.99); }
+    .btn-white {
+        background: #fff;
+        color: var(--primary);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    }
+    .btn-white:hover { background: var(--accent-light); color: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.22); }
+    .btn-outline {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255,255,255,0.65);
+    }
+    .btn-outline:hover { background: #fff; color: var(--primary); border-color: #fff; transform: translateY(-2px); }
+    .btn-primary {
+        background: linear-gradient(135deg, var(--primary), #2a6ab3);
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(26,77,143,0.28);
+    }
+    .btn-primary:hover { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); box-shadow: 0 8px 22px rgba(26,77,143,0.38); transform: translateY(-1px); }
+    .btn-accent {
+        background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(232,163,61,0.35);
+    }
+    .btn-accent:hover { background: linear-gradient(135deg, var(--accent-dark), #a86a12); box-shadow: 0 8px 22px rgba(232,163,61,0.45); transform: translateY(-1px); }
+    .btn-danger { background: var(--danger); color: #fff; }
+    .btn-danger:hover { background: #b91c1c; transform: translateY(-1px); }
+    .btn-success { background: var(--success); color: #fff; }
+    .btn-success:hover { background: #15803d; transform: translateY(-1px); }
+    .btn-neutral { background: #e8ecf2; color: var(--text-soft); }
+    .btn-neutral:hover { background: #d6dce5; }
+    .btn-sm { padding: 6px 12px; font-size: 12px; border-radius: var(--radius-pill); }
+
+    /* ============================================================
+       ИНФО-БЛОК
+       ============================================================ */
+    .info-strip {
+        background: var(--surface);
+        padding: 34px 0;
+        border-bottom: 1px solid var(--border);
+        position: relative;
+    }
+    .info-strip::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        border-radius: 0 0 4px 4px;
+    }
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+    }
+    .info-item {
+        text-align: center;
+        padding: 18px 14px;
+        border-radius: var(--radius);
+        transition: background var(--t), transform var(--t), box-shadow var(--t);
+        border: 1px solid transparent;
+    }
+    .info-item:hover {
+        background: var(--surface-alt);
+        transform: translateY(-3px);
+        border-color: var(--border);
+        box-shadow: var(--shadow);
+    }
+    .info-item .icon-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--primary-light), #dbe7f7);
+        color: var(--primary);
+        margin-bottom: 10px;
+        transition: transform var(--t);
+    }
+    .info-item:hover .icon-box { transform: rotate(-6deg) scale(1.06); }
+    .info-item .value {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.3;
+        font-family: var(--font-display);
+    }
+    .info-item .label { font-size: 12.5px; color: var(--text-muted); margin-top: 3px; }
+
+    /* ============================================================
+       СЕКЦИИ
+       ============================================================ */
+    section { padding: 58px 0; }
+    section.alt { background: var(--surface); }
+
+    .section-title {
+        font-size: 27px;
+        color: var(--primary);
+        margin-bottom: 8px;
+        text-align: center;
+        font-weight: 700;
+        font-family: var(--font-display);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        letter-spacing: -0.2px;
+    }
+    .section-title .icon { color: var(--accent); }
+    .section-subtitle {
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 38px;
+        font-size: 14.5px;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-subtitle::after {
+        content: '';
+        display: block;
+        width: 46px;
+        height: 3px;
+        margin: 14px auto 0;
+        border-radius: 3px;
+        background: linear-gradient(90deg, var(--accent), #f5c877);
+    }
+
+    /* ============================================================
+       НОВОСТИ
+       ============================================================ */
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 22px;
+    }
+    .news-card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: transform var(--t), box-shadow var(--t);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border);
+        position: relative;
+    }
+    .news-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent), var(--primary));
+        opacity: 0;
+        transition: opacity var(--t);
+        z-index: 2;
+    }
+    .news-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+        border-color: transparent;
+    }
+    .news-card:hover::before { opacity: 1; }
+    .news-img {
+        height: 185px;
+        background: linear-gradient(135deg, var(--primary), #2c6bb8);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+    .news-img img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        transition: transform var(--t-slow);
+    }
+    .news-card:hover .news-img img { transform: scale(1.06); }
+    .news-img::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 55%, rgba(15,52,96,0.35));
+        z-index: 1;
+        pointer-events: none;
+    }
+    .news-img .icon-xl { position: relative; z-index: 0; opacity: 0.6; }
+    .news-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; }
+    .news-date {
+        font-size: 12px;
+        color: var(--accent-dark);
+        margin-bottom: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-weight: 600;
+        background: var(--accent-light);
+        padding: 3px 10px;
+        border-radius: var(--radius-pill);
+        align-self: flex-start;
+    }
+    .news-body h3 { font-size: 16px; margin-bottom: 8px; color: var(--text); line-height: 1.4; font-weight: 700; }
+    .news-body p { font-size: 13.5px; color: var(--text-muted); flex: 1; }
+
+    /* ============================================================
+       УСЛУГИ
+       ============================================================ */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 18px;
+    }
+    .service-card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 22px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--accent);
+        transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+    .service-card::after {
+        content: '';
+        position: absolute;
+        right: -30px;
+        bottom: -30px;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: var(--primary-light);
+        opacity: 0;
+        transition: opacity var(--t), transform var(--t);
+        transform: scale(0.7);
+    }
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-left-color: var(--primary);
+    }
+    .service-card:hover::after { opacity: 0.6; transform: scale(1); }
+    .service-card h3 { font-size: 15.5px; margin-bottom: 7px; color: var(--primary); line-height: 1.35; position: relative; z-index: 1; }
+    .service-card p { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; position: relative; z-index: 1; }
+    .service-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        font-size: 12px;
+        color: var(--text-muted);
+        padding-top: 12px;
+        border-top: 1px dashed var(--border);
+        position: relative;
+        z-index: 1;
+    }
+    .service-meta span { display: inline-flex; align-items: center; gap: 4px; }
+    .service-meta .icon { color: var(--accent-dark); }
+
+    /* ============================================================
+       ФОРМЫ
+       ============================================================ */
+    .form-container {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        padding: 36px;
+        max-width: 720px;
+        margin: 0 auto;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border);
+        position: relative;
+    }
+    .form-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 36px;
+        right: 36px;
+        height: 4px;
+        border-radius: 0 0 4px 4px;
+        background: linear-gradient(90deg, var(--accent), var(--primary));
+    }
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    .form-group { display: flex; flex-direction: column; }
+    .form-group label {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--text-soft);
+        margin-bottom: 7px;
+        letter-spacing: 0.2px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 11px 14px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        font-size: 14px;
+        transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
+        font-family: inherit;
+        background: var(--surface-alt);
+        color: var(--text);
+        width: 100%;
+    }
+    .form-group input:hover,
+    .form-group select:hover,
+    .form-group textarea:hover { border-color: #c3cedd; }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(26,77,143,0.10);
+    }
+    .form-group textarea { resize: vertical; min-height: 96px; }
+    .full-width { grid-column: 1 / -1; }
+    .form-hint {
+        font-size: 11.5px;
+        color: var(--text-muted);
+        margin-top: 5px;
+    }
+
+    /* ============================================================
+       БЛОК ЗАГРУЗКИ ИЗОБРАЖЕНИЯ НОВОСТИ
+       ============================================================ */
+    .news-image-zone {
+        border: 2px dashed var(--border);
+        border-radius: var(--radius);
+        padding: 18px;
+        text-align: center;
+        cursor: pointer;
+        transition: border-color var(--t-fast), background var(--t-fast);
+        background: var(--surface-alt);
+    }
+    .news-image-zone:hover {
+        border-color: var(--accent);
+        background: var(--accent-light);
+    }
+    .news-image-zone #newsImagePreview img {
+        max-width: 100%;
+        max-height: 200px;
+        border-radius: var(--radius-sm);
+        display: block;
+        margin: 0 auto 10px;
+        object-fit: contain;
+        box-shadow: var(--shadow-sm);
+    }
+    .news-image-hint {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin: 6px 0 0;
+    }
+    .news-image-actions {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        margin-top: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       КАРТА
+       ============================================================ */
+    .map-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 0;
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border);
+    }
+    #map { height: 540px; width: 100%; background: #e5e7eb; z-index: 1; }
+    .map-sidebar {
+        padding: 22px;
+        background: var(--surface-alt);
+        display: flex;
+        flex-direction: column;
+        max-height: 540px;
+        border-left: 1px solid var(--border);
+    }
+    .map-sidebar h3 {
+        font-size: 16px;
+        color: var(--primary);
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--border);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-family: var(--font-display);
+    }
+    .map-sidebar h3 .icon { color: var(--accent); }
+    .map-hint {
+        font-size: 12px;
+        color: #7a5b12;
+        background: var(--accent-light);
+        padding: 10px 13px;
+        border-radius: var(--radius-sm);
+        margin-bottom: 14px;
+        border-left: 3px solid var(--accent);
+        flex-shrink: 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        line-height: 1.45;
+    }
+    #problemsList { overflow-y: auto; flex: 1; padding-right: 4px; }
+    #problemsList::-webkit-scrollbar { width: 6px; }
+    #problemsList::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    .problem-item {
+        background: var(--surface);
+        padding: 12px 13px;
+        border-radius: var(--radius-sm);
+        margin-bottom: 9px;
+        border-left: 3px solid var(--warning);
+        font-size: 12.5px;
+        box-shadow: var(--shadow-sm);
+        transition: transform var(--t-fast), box-shadow var(--t-fast);
+    }
+    .problem-item:hover { transform: translateX(3px); box-shadow: var(--shadow); }
+    .problem-item.resolved { border-left-color: var(--success); opacity: 0.72; }
+    .problem-item strong { display: block; color: var(--text); margin-bottom: 3px; font-size: 13px; }
+    .problem-item small { color: var(--text-muted); }
+
+    /* ============================================================
+       МОДАЛЬНЫЕ ОКНА
+       ============================================================ */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(15,23,42,0.60);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        backdrop-filter: blur(3px);
+    }
+    .modal-overlay.active { display: flex; animation: overlayIn 0.22s ease; }
+    @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
+    .modal {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        padding: 30px;
+        max-width: 520px;
+        width: 100%;
+        max-height: 88vh;
+        overflow-y: auto;
+        animation: modalIn 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        box-shadow: var(--shadow-lg);
+        border-top: 5px solid var(--accent);
+    }
+    @keyframes modalIn {
+        from { transform: translateY(-24px) scale(0.97); opacity: 0; }
+        to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .modal h3 { color: var(--primary); margin-bottom: 16px; font-size: 19px; padding-right: 34px; font-family: var(--font-display); }
+    .modal-close {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+        font-size: 26px;
+        cursor: pointer;
+        color: var(--text-muted);
+        line-height: 1;
+        background: none;
+        border: none;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background var(--t-fast), color var(--t-fast), transform var(--t-fast);
+        font-family: inherit;
+    }
+    .modal-close:hover { background: var(--accent-light); color: var(--danger); transform: rotate(90deg); }
+
+    /* ============================================================
+       УВЕДОМЛЕНИЯ
+       ============================================================ */
+    .toast {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: var(--success);
+        color: #fff;
+        padding: 14px 22px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(160%);
+        transition: transform var(--t-slow);
+        z-index: 3000;
+        font-size: 13.5px;
+        font-weight: 500;
+        max-width: 340px;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .toast.show { transform: translateY(0); }
+
+    /* ============================================================
+       АДМИН-ПАНЕЛЬ
+       ============================================================ */
+    .admin-panel { display: none; padding: 30px 0 70px; }
+    .admin-panel.active { display: block; animation: fadeInUp 0.35s ease; }
+    .admin-tabs {
+        display: flex;
+        gap: 4px;
+        margin-bottom: 26px;
+        flex-wrap: wrap;
+        border-bottom: 2px solid var(--border);
+    }
+    .admin-tab {
+        padding: 12px 20px;
+        background: transparent;
+        border: none;
+        border-bottom: 3px solid transparent;
+        cursor: pointer;
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--text-muted);
+        transition: color var(--t-fast), border-color var(--t-fast), background var(--t-fast);
+        margin-bottom: -2px;
+        border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+        font-family: inherit;
+        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+    }
+    .admin-tab .icon { color: var(--accent-dark); }
+    .admin-tab:hover { color: var(--primary); background: var(--primary-light); }
+    .admin-tab.active { color: var(--primary); border-bottom-color: var(--accent); background: var(--primary-light); }
+    .admin-content { display: none; }
+    .admin-content.active { display: block; animation: fadeInUp 0.3s ease; }
+    .admin-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .admin-header h2 { font-size: 20px; color: var(--primary); font-family: var(--font-display); }
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 16px;
+        margin-bottom: 26px;
+    }
+    .stat-card {
+        background: var(--surface);
+        padding: 20px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--primary);
+        transition: transform var(--t-fast), box-shadow var(--t-fast);
+        position: relative;
+        overflow: hidden;
+    }
+    .stat-card::after {
+        content: '';
+        position: absolute;
+        right: -16px;
+        top: -16px;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: var(--primary-light);
+        opacity: 0.55;
+    }
+    .stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .stat-card .num { font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.1; font-family: var(--font-display); position: relative; z-index: 1; }
+    .stat-card .label { font-size: 12.5px; color: var(--text-muted); margin-top: 4px; display: flex; align-items: center; gap: 5px; position: relative; z-index: 1; }
+    .stat-card .label .icon { color: var(--accent-dark); }
+
+    .table-wrapper {
+        background: var(--surface);
+        border-radius: var(--radius);
+        overflow-x: auto;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 700px; }
+    th {
+        background: linear-gradient(180deg, var(--primary-light), #dfe9f7);
+        color: var(--primary);
+        text-align: left;
+        padding: 13px 15px;
+        font-weight: 700;
+        font-size: 11.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid var(--border);
+        white-space: nowrap;
+    }
+    td { padding: 13px 15px; border-bottom: 1px solid var(--border); color: var(--text-soft); vertical-align: middle; }
+    tr:last-child td { border-bottom: none; }
+    tbody tr { transition: background var(--t-fast); }
+    tbody tr:hover td { background: var(--accent-light); }
+    td .btn + .btn { margin-left: 6px; }
+
+    .badge {
+        display: inline-block;
+        padding: 4px 11px;
+        border-radius: var(--radius-pill);
+        font-size: 11px;
+        font-weight: 700;
+        white-space: nowrap;
+        letter-spacing: 0.2px;
+    }
+    .badge-new { background: #fef3c7; color: #92400e; }
+    .badge-work { background: #dbeafe; color: #1e40af; }
+    .badge-done { background: #dcfce7; color: #166534; }
+
+    .empty-state { padding: 48px 20px; text-align: center; color: var(--text-muted); }
+    .empty-state .icon-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background: var(--primary-light);
+        color: var(--primary);
+        margin-bottom: 14px;
+    }
+
+    .news-form-box {
+        background: var(--surface);
+        padding: 26px;
+        border-radius: var(--radius);
+        margin-bottom: 24px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        border-top: 4px solid var(--accent);
+    }
+    .news-form-box h3 { color: var(--primary); margin-bottom: 18px; font-size: 17px; display: flex; align-items: center; gap: 8px; font-family: var(--font-display); }
+    .news-form-box h3 .icon { color: var(--accent); }
+
+    .admin-news-thumb {
+        width: 46px;
+        height: 46px;
+        border-radius: var(--radius-sm);
+        object-fit: cover;
+        border: 1px solid var(--border);
+        background: var(--surface-alt);
+        display: block;
+    }
+    .admin-news-no-img {
+        width: 46px;
+        height: 46px;
+        border-radius: var(--radius-sm);
+        border: 1px dashed var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+        background: var(--surface-alt);
+        font-size: 18px;
+    }
+
+    /* ============================================================
+       ЭКРАН ЛОГИНА
+       ============================================================ */
+    .login-screen {
+        min-height: calc(100vh - 200px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        background:
+            radial-gradient(circle at 30% 20%, rgba(232,163,61,0.10), transparent 40%),
+            radial-gradient(circle at 70% 80%, rgba(26,77,143,0.10), transparent 45%),
+            var(--bg);
+    }
+    .login-box {
+        background: var(--surface);
+        padding: 40px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        width: 100%;
+        max-width: 410px;
+        animation: fadeInUp 0.45s ease;
+        border-top: 5px solid var(--accent);
+        position: relative;
+    }
+    .login-box h2 { color: var(--primary); text-align: center; margin-bottom: 6px; font-size: 21px; font-family: var(--font-display); }
+    .login-box .subtitle { text-align: center; color: var(--text-muted); font-size: 13px; margin-bottom: 24px; }
+    .login-icon {
+        width: 68px;
+        height: 68px;
+        background: linear-gradient(135deg, var(--primary-light), #dbe7f7);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 18px;
+        color: var(--primary);
+        transform: rotate(-3deg);
+        box-shadow: 0 6px 18px rgba(26,77,143,0.15);
+    }
+    .login-hint {
+        background: var(--accent-light);
+        border: 1px solid #f5d9a8;
+        color: #7a5b12;
+        font-size: 12px;
+        padding: 11px 15px;
+        border-radius: var(--radius-sm);
+        margin-top: 18px;
+        text-align: center;
+    }
+
+    /* ============================================================
+       РУКОВОДСТВО И СТРУКТУРА
+       ============================================================ */
+    .subsection-title {
+        font-size: 18px;
+        color: var(--primary);
+        margin: 34px 0 16px;
+        font-weight: 700;
+        text-align: center;
+        font-family: var(--font-display);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+    .subsection-title::before,
+    .subsection-title::after {
+        content: '';
+        height: 1px;
+        width: 40px;
+        background: linear-gradient(90deg, transparent, var(--accent));
+    }
+    .subsection-title::after { background: linear-gradient(90deg, var(--accent), transparent); }
+
+    .chairman-card {
+        display: grid;
+        grid-template-columns: 170px 1fr;
+        gap: 28px;
+        background: var(--surface);
+        padding: 28px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border);
+        border-left: 6px solid var(--accent);
+        margin-bottom: 10px;
+        align-items: start;
+        position: relative;
+        overflow: hidden;
+    }
+    .chairman-card::after {
+        content: '';
+        position: absolute;
+        right: -60px;
+        top: -60px;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: var(--primary-light);
+        opacity: 0.45;
+    }
+    .chairman-photo {
+        width: 170px;
+        height: 170px;
+        border-radius: var(--radius);
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 22px rgba(16,32,54,0.20);
+        z-index: 1;
+    }
+    .chairman-photo img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        z-index: 1;
+    }
+    .chairman-photo .icon { width: 64px; height: 64px; position: relative; z-index: 0; opacity: 0.75; }
+    .chairman-info { position: relative; z-index: 1; }
+    .chairman-role {
+        font-size: 12px;
+        color: var(--accent-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        background: var(--accent-light);
+        display: inline-block;
+        padding: 3px 12px;
+        border-radius: var(--radius-pill);
+    }
+    .chairman-name { font-size: 24px; color: var(--primary); margin-bottom: 10px; line-height: 1.25; font-family: var(--font-display); }
+    .chairman-note { font-size: 13.5px; color: var(--text-soft); margin-bottom: 14px; }
+    .chairman-contacts { display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--text-soft); }
+    .chairman-contacts span { display: inline-flex; align-items: flex-start; gap: 7px; }
+    .chairman-contacts .icon { color: var(--accent-dark); margin-top: 3px; }
+
+    .staff-grid { display: grid; gap: 16px; margin-bottom: 8px; }
+    .staff-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .staff-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .staff-card {
+        background: var(--surface);
+        padding: 20px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        display: flex;
+        gap: 15px;
+        transition: transform var(--t-fast), box-shadow var(--t-fast), border-color var(--t-fast);
+        border: 1px solid var(--border);
+    }
+    .staff-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--accent);
+    }
+    .staff-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--primary-light), #dbe7f7);
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: transform var(--t);
+    }
+    .staff-card:hover .staff-icon { transform: rotate(-8deg) scale(1.05); }
+    .staff-info h4 { font-size: 14.5px; color: var(--text); margin-bottom: 4px; line-height: 1.3; }
+    .staff-role { font-size: 12.5px; color: var(--accent-dark); font-weight: 600; margin-bottom: 5px; line-height: 1.35; }
+    .staff-scope { font-size: 12.5px; color: var(--text-muted); line-height: 1.45; }
+
+    .one-window-card {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        padding: 28px;
+        margin-top: 32px;
+        border: 1px solid var(--border);
+        border-top: 5px solid var(--success);
+        position: relative;
+        overflow: hidden;
+    }
+    .one-window-card::after {
+        content: '';
+        position: absolute;
+        left: -50px;
+        bottom: -50px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #dcfce7;
+        opacity: 0.5;
+    }
+    .one-window-header { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; flex-wrap: wrap; position: relative; z-index: 1; }
+    .one-window-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+        color: var(--success);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 0 6px 16px rgba(22,163,74,0.18);
+    }
+    .one-window-header h3 { font-size: 19px; color: var(--primary); margin-bottom: 3px; font-family: var(--font-display); }
+    .one-window-sub { font-size: 13px; color: var(--text-muted); }
+    .one-window-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 18px; position: relative; z-index: 1; }
+    .one-window-item { background: var(--surface-alt); padding: 15px; border-radius: var(--radius); border-left: 3px solid var(--success); transition: transform var(--t-fast); }
+    .one-window-item:hover { transform: translateY(-2px); }
+    .one-window-label { font-size: 11.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 6px; }
+    .one-window-value { font-size: 13.5px; color: var(--text-soft); line-height: 1.5; }
+    .one-window-note { font-size: 12.5px; color: #166534; background: #f0fdf4; padding: 13px 16px; border-radius: var(--radius-sm); line-height: 1.55; position: relative; z-index: 1; }
+
+    .about-strip { margin-top: 32px; background: var(--surface); padding: 26px; border-radius: var(--radius-lg); box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-top: 14px; }
+    .about-item { padding: 14px; background: var(--surface-alt); border-radius: var(--radius-sm); border-left: 3px solid var(--accent); transition: transform var(--t-fast), box-shadow var(--t-fast); }
+    .about-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .about-label { font-size: 11.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 5px; }
+    .about-value { font-size: 15px; color: var(--primary); font-weight: 700; }
+
+    /* ============================================================
+       ПОДВАЛ
+       ============================================================ */
+    footer {
+        background: linear-gradient(180deg, #1b2532, #141c26);
+        color: #c5cdd8;
+        padding: 42px 0 20px;
+        margin-top: 50px;
+        position: relative;
+    }
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
+    }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; margin-bottom: 26px; }
+    .footer-col h4 { color: #fff; margin-bottom: 12px; font-size: 14px; font-family: var(--font-display); position: relative; padding-bottom: 8px; }
+    .footer-col h4::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 28px;
+        height: 2px;
+        background: var(--accent);
+        border-radius: 2px;
+    }
+    .footer-col p, .footer-col a {
+        font-size: 12.5px;
+        color: #9aa6b5;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-start;
+        gap: 7px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition: color var(--t-fast), transform var(--t-fast);
+    }
+    .footer-col a:hover { color: var(--accent); transform: translateX(3px); }
+    .footer-col p .icon, .footer-col a .icon { color: var(--accent); margin-top: 3px; }
+    .footer-bottom { border-top: 1px solid #2d3a4a; padding-top: 18px; text-align: center; font-size: 12px; color: #6f7d8e; }
+
+    /* ============================================================
+       LEAFLET — убираем любые флаги/лишние элементы в атрибуции
+       ============================================================ */
+    .leaflet-control-attribution {
+        background: rgba(255,255,255,0.9) !important;
+        font-size: 11px !important;
+        padding: 3px 7px !important;
+        border-radius: 6px 0 0 0 !important;
+        color: #3c4654 !important;
+    }
+    .leaflet-control-attribution img,
+    .leaflet-control-attribution .leaflet-attribution-flag {
+        display: none !important;
+    }
+    .leaflet-control-attribution a {
+        color: var(--primary) !important;
+        text-decoration: none;
+    }
+
+    /* ============================================================
+       АДАПТИВНОСТЬ
+       ============================================================ */
+    @media (max-width: 900px) {
+        .map-wrapper { grid-template-columns: 1fr; }
+        #map { height: 400px; }
+        .map-sidebar { max-height: 320px; border-left: none; border-top: 1px solid var(--border); }
+    }
+    @media (max-width: 768px) {
+        .top-bar { font-size: 11.5px; }
+        .top-bar .container { justify-content: center; text-align: center; }
+        .hero { padding: 46px 0 58px; }
+        .hero h2 { font-size: 24px; }
+        .hero p { font-size: 14px; }
+        .section-title { font-size: 21px; }
+        .section-subtitle { font-size: 13.5px; margin-bottom: 30px; }
+        section { padding: 44px 0; }
+        .form-row { grid-template-columns: 1fr; gap: 14px; }
+        .form-container { padding: 24px; }
+        .form-container::before { left: 24px; right: 24px; }
+        .main-header .container { flex-direction: column; align-items: stretch; }
+        .logo { justify-content: center; text-align: center; }
+        .logo-text h1 { font-size: 13.5px; }
+        nav ul { justify-content: center; }
+        nav a { padding: 7px 11px; font-size: 12.5px; }
+        .admin-tabs { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+        .admin-tab { padding: 10px 15px; font-size: 12.5px; }
+        .login-box { padding: 28px; }
+        .toast { left: 16px; right: 16px; bottom: 16px; max-width: none; }
+        #map { height: 320px; }
+        .modal { padding: 24px; }
+        th, td { padding: 10px 11px; font-size: 12px; }
+        .chairman-card { grid-template-columns: 1fr; text-align: center; }
+        .chairman-photo { width: 140px; height: 140px; margin: 0 auto; }
+        .chairman-photo .icon { width: 48px; height: 48px; }
+        .chairman-name { font-size: 20px; }
+        .chairman-contacts { align-items: center; }
+        .staff-card { flex-direction: column; text-align: center; }
+        .staff-icon { margin: 0 auto; }
+        .one-window-header { text-align: center; justify-content: center; flex-direction: column; }
+        .news-img { height: 165px; }
+        .subsection-title::before, .subsection-title::after { width: 24px; }
+    }
+    @media (max-width: 480px) {
+        .hero h2 { font-size: 20px; }
+        .hero-buttons { flex-direction: column; align-items: stretch; }
+        .btn { width: 100%; }
+        .hero-buttons .btn { width: 100%; }
+        .info-grid { grid-template-columns: 1fr 1fr; }
+        .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+</style>
+</head>
+<body>
+
+<!-- ==================== ШАПКА ==================== -->
+<header>
+    <div class="top-bar">
+        <div class="container">
+            <span>
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Приёмная: (8-02357) 3 84 10
+            </span>
+            <span>
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                247319, г.п. Октябрьский, ул. Советская, 57
+            </span>
+            <span>
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Пн–Пт: 8:00 – 17:30
+            </span>
+        </div>
+    </div>
+    <div class="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">О</div>
+                <div class="logo-text">
+                    <h1>Октябрьский районный исполнительный комитет</h1>
+                    <p>Официальный портал услуг • Гомельская область</p>
+                </div>
+            </div>
+            <nav aria-label="Основная навигация">
+                <ul id="mainNav"></ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== ПУБЛИЧНАЯ ЧАСТЬ ==================== -->
+<div id="publicSite">
+
+    <!-- ГЕРОЙ -->
+    <div class="hero">
+        <div class="container">
+            <div class="region-badge">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Гомельская область • Октябрьский район
+            </div>
+            <h2>Добро пожаловать на портал Октябрьского района</h2>
+            <p>Запишитесь на приём онлайн, узнайте последние новости района, сообщите о городской проблеме — всё в одном месте</p>
+            <div class="hero-buttons">
+                <button class="btn btn-white" onclick="scrollToSection('appointment')">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Записаться на приём
+                </button>
+                <button class="btn btn-outline" onclick="scrollToSection('map-section')">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Сообщить о проблеме
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ИНФО О РАЙОНЕ -->
+    <div class="info-strip">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="icon-box">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="value">12 521</div>
+                    <div class="label">жителей района (2025)</div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-box">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="value">138,1 тыс. га</div>
+                    <div class="label">общая площадь района</div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-box">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><path d="M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
+                    </div>
+                    <div class="value">43,9 тыс. га</div>
+                    <div class="label">сельскохозяйственных земель</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- РУКОВОДСТВО И СТРУКТУРА -->
+    <section id="leadership" class="section-anchor alt reveal">
+        <div class="container">
+            <h2 class="section-title">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Руководство и структура
+            </h2>
+            <p class="section-subtitle">Основные сведения о работе Октябрьского районного исполнительного комитета</p>
+
+            <div class="chairman-card">
+                <div class="chairman-photo">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <!-- Фото председателя. Если файл с другим расширением — поменяйте здесь (например chairmen.png) -->
+                    <img src="chairmen.jpg" alt="Намоченко Ирина Михайловна — председатель Октябрьского райисполкома" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="chairman-info">
+                    <div class="chairman-role">Председатель Октябрьского районного исполнительного комитета</div>
+                    <h3 class="chairman-name">Намоченко Ирина Михайловна</h3>
+                    <p class="chairman-note">
+                        Осуществляет общее руководство деятельностью райисполкома, ведёт личный приём граждан,
+                        представляет район в вышестоящих органах.
+                    </p>
+                    <div class="chairman-contacts">
+                        <span>
+                            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            (8-02357) 3 84 10
+                        </span>
+                        <span>
+                            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Личный приём: 9, 23 числа месяца, 8:00–13:00
+                        </span>
+                        <span>
+                            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            каб. 108, ул. Советская, 57
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Заместители председателя</h3>
+            <div class="staff-grid staff-grid-2">
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Новик Татьяна Викторовна</h4>
+                        <p class="staff-role">Первый заместитель председателя, начальник управления сельского хозяйства и продовольствия</p>
+                        <p class="staff-scope">Курирует: сельское хозяйство, продовольствие, земельные отношения</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Пищало Александр Викторович</h4>
+                        <p class="staff-role">Заместитель председателя</p>
+                        <p class="staff-scope">Курирует: строительство, ЖКХ, архитектура, благоустройство</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Киселев Виктор Петрович</h4>
+                        <p class="staff-role">Заместитель председателя</p>
+                        <p class="staff-scope">Курирует: экономика, инвестиции, промышленность, предпринимательство</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Таргонский Олег Викторович</h4>
+                        <p class="staff-role">Заместитель председателя</p>
+                        <p class="staff-scope">Курирует: социальная сфера, образование, культура, здравоохранение, идеология</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Руководители структурных подразделений</h3>
+            <div class="staff-grid staff-grid-3">
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Габинетова Татьяна Анатольевна</h4>
+                        <p class="staff-role">Начальник управления по труду, занятости и социальной защите</p>
+                        <p class="staff-scope">Пособия, социальная поддержка, трудоустройство, пенсии</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Кадол Андрей Васильевич</h4>
+                        <p class="staff-role">Начальник отдела образования</p>
+                        <p class="staff-scope">Школы, детские сады, дополнительное образование</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Туровец Наталья Михайловна</h4>
+                        <p class="staff-role">Начальник отдела экономики</p>
+                        <p class="staff-scope">Экономическое развитие, инвестиции, предпринимательство</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Михайлик Наталья Георгиевна</h4>
+                        <p class="staff-role">Начальник отдела землеустройства</p>
+                        <p class="staff-scope">Земельные участки, кадастр, геодезия, аренда земли</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Тукач Галина Николаевна</h4>
+                        <p class="staff-role">Заведующий сектором по работе с обращениями граждан и юридических лиц</p>
+                        <p class="staff-scope">Приём и рассмотрение обращений граждан и юридических лиц</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div class="staff-info">
+                        <h4>Курсевич Карина Анатольевна</h4>
+                        <p class="staff-role">Начальник отдела идеологической работы и по делам молодёжи</p>
+                        <p class="staff-scope">Идеология, молодёжная политика, работа со СМИ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="one-window-card">
+                <div class="one-window-header">
+                    <div class="one-window-icon">
+                        <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    </div>
+                    <div>
+                        <h3>Служба «Одно окно»</h3>
+                        <p class="one-window-sub">Приём заявлений и выдача документов по принципу «одного окна»</p>
+                    </div>
+                </div>
+                <div class="one-window-grid">
+                    <div class="one-window-item">
+                        <div class="one-window-label">Режим работы</div>
+                        <div class="one-window-value">Пн–Ср, Пт: 8:00 – 18:00<br>Чт: 8:00 – 20:00<br>Без перерыва на обед<br>Сб — по предварительной записи</div>
+                    </div>
+                    <div class="one-window-item">
+                        <div class="one-window-label">Телефон</div>
+                        <div class="one-window-value">8 (02357) 3 84 36<br>Предварительная запись</div>
+                    </div>
+                    <div class="one-window-item">
+                        <div class="one-window-label">Расположение</div>
+                        <div class="one-window-value">г.п. Октябрьский,<br>ул. Советская, 57, 1-й этаж</div>
+                    </div>
+                    <div class="one-window-item">
+                        <div class="one-window-label">Основные услуги</div>
+                        <div class="one-window-value">Справки, регистрация, субсидии, земельные и жилищные вопросы, оформление документов</div>
+                    </div>
+                </div>
+                <p class="one-window-note">
+                    Через службу «Одно окно» можно подать заявление на большинство административных процедур,
+                    осуществляемых райисполкомом. Полный перечень услуг уточняйте по телефону.
+                </p>
+            </div>
+
+            <div class="about-strip">
+                <h3 class="subsection-title" style="text-align:left; margin-top: 0; justify-content:flex-start;">Кратко о районе</h3>
+                <div class="about-grid">
+                    <div class="about-item">
+                        <div class="about-label">Образован</div>
+                        <div class="about-value">28 июня 1939 года</div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-label">Административный центр</div>
+                        <div class="about-value">г.п. Октябрьский</div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-label">Сельсоветов</div>
+                        <div class="about-value">7</div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-label">Площадь</div>
+                        <div class="about-value">1381,2 км²</div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-label">Население</div>
+                        <div class="about-value">12 521 чел.</div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-label">Область</div>
+                        <div class="about-value">Гомельская</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- НОВОСТИ -->
+    <section id="news" class="section-anchor reveal">
+        <div class="container">
+            <h2 class="section-title">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8z"/></svg>
+                Новости Октябрьского района
+            </h2>
+            <p class="section-subtitle">Актуальные события и объявления района</p>
+            <div class="news-grid" id="newsGrid"></div>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section id="services" class="section-anchor alt reveal">
+        <div class="container">
+            <h2 class="section-title">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                Популярные услуги
+            </h2>
+            <p class="section-subtitle">Нажмите на услугу, чтобы увидеть список необходимых документов</p>
+            <div class="services-grid" id="servicesGrid"></div>
+        </div>
+    </section>
+
+    <!-- ЗАПИСЬ НА ПРИЁМ -->
+    <section id="appointment" class="section-anchor reveal">
+        <div class="container">
+            <h2 class="section-title">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+                Электронная запись на приём
+            </h2>
+            <p class="section-subtitle">Заполните форму — мы подтвердим запись по телефону</p>
+            <div class="form-container">
+                <form id="appointmentForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fio">ФИО *</label>
+                            <input type="text" id="fio" name="fio" required placeholder="Иванов Иван Иванович" minlength="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+375 (29) 123-45-67">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service">Услуга *</label>
+                            <select id="service" name="service" required>
+                                <option value="">— Выберите услугу —</option>
+                                <option>Жилищные вопросы</option>
+                                <option>Землеустройство</option>
+                                <option>Социальная защита</option>
+                                <option>Архитектура и строительство</option>
+                                <option>Сельское хозяйство</option>
+                                <option>Обращения граждан</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Отдел *</label>
+                            <select id="department" name="department" required>
+                                <option value="">— Выберите отдел —</option>
+                                <option>Управление по труду, занятости и социальной защите</option>
+                                <option>Управление сельского хозяйства и продовольствия</option>
+                                <option>Отдел землеустройства</option>
+                                <option>Отдел экономики</option>
+                                <option>Отдел образования</option>
+                                <option>Отдел идеологической работы и по делам молодёжи</option>
+                                <option>Сектор по работе с обращениями граждан и юридических лиц</option>
+                                <option>Юридический отдел</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dateInput">Дата *</label>
+                            <input type="date" id="dateInput" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeSelect">Время *</label>
+                            <select id="timeSelect" name="time" required>
+                                <option value="">— Выберите время —</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="comment">Комментарий (необязательно)</label>
+                            <textarea id="comment" name="comment" placeholder="Кратко опишите суть вопроса..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        Записаться на приём
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАРТА ПРОБЛЕМ -->
+    <section id="map-section" class="section-anchor alt reveal">
+        <div class="container">
+            <h2 class="section-title">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Интерактивная карта проблем
+            </h2>
+            <p class="section-subtitle">Кликните по карте, чтобы сообщить о проблеме в Октябрьском районе</p>
+            <div class="map-wrapper">
+                <div id="map"></div>
+                <div class="map-sidebar">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        Сообщённые проблемы
+                    </h3>
+                    <div class="map-hint">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        Кликните по карте — откроется форма добавления проблемы
+                    </div>
+                    <div id="problemsList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- ==================== ЭКРАН ЛОГИНА ==================== -->
+<div id="loginScreen" class="login-screen" style="display: none;">
+    <div class="login-box">
+        <div class="login-icon">
+            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h2>Вход для администратора</h2>
+        <p class="subtitle">Доступ только для сотрудников Октябрьского райисполкома</p>
+        <form id="loginForm">
+            <div class="form-group" style="margin-bottom: 14px;">
+                <label for="loginUser">Логин</label>
+                <input type="text" id="loginUser" name="login" required placeholder="admin" autocomplete="username">
+            </div>
+            <div class="form-group" style="margin-bottom: 18px;">
+                <label for="loginPass">Пароль</label>
+                <input type="password" id="loginPass" name="password" required placeholder="••••••••" autocomplete="current-password">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Войти</button>
+            <button type="button" class="btn btn-outline" style="width: 100%; margin-top: 10px; color: var(--primary); border-color: var(--primary);" onclick="showPublic()">← Назад на сайт</button>
+        </form>
+        <div class="login-hint">
+            Демо-доступ: <strong>admin</strong> / <strong>admin123</strong>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== АДМИН-ПАНЕЛЬ ==================== -->
+<div id="adminPanel" class="admin-panel">
+    <div class="container">
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="num" id="statNews">0</div>
+                <div class="label">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+                    Новостей
+                </div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="num" id="statAppointments">0</div>
+                <div class="label">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Записей на приём
+                </div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--warning);">
+                <div class="num" id="statProblems">0</div>
+                <div class="label">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Сообщений о проблемах
+                </div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--danger);">
+                <div class="num" id="statNewProblems">0</div>
+                <div class="label">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    Новых проблем
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-tabs" role="tablist">
+            <button class="admin-tab active" onclick="switchTab('news', this)">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+                Новости
+            </button>
+            <button class="admin-tab" onclick="switchTab('appointments', this)">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Записи на приём
+            </button>
+            <button class="admin-tab" onclick="switchTab('problems', this)">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Жалобы и проблемы
+            </button>
+        </div>
+
+        <!-- ВКЛАДКА: НОВОСТИ -->
+        <div id="tab-news" class="admin-content active">
+            <div class="news-form-box">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Опубликовать новость
+                </h3>
+                <form id="newsForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="newsTitle">Заголовок *</label>
+                            <input type="text" id="newsTitle" name="title" required placeholder="О чём новость?" maxlength="120">
+                        </div>
+                        <div class="form-group">
+                            <label for="newsIcon">Иконка (эмодзи, запасная)</label>
+                            <input type="text" id="newsIcon" name="icon" placeholder="📢" maxlength="4" value="📢">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 12px;">
+                        <label>Изображение</label>
+                        <div id="newsImageZone" class="news-image-zone">
+                            <div id="newsImagePreview" style="display: none;">
+                                <img id="newsImagePreviewImg" alt="Предпросмотр">
+                            </div>
+                            <div id="newsImagePlaceholder">
+                                <svg class="icon icon-xl" style="color: var(--text-muted);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                                <p class="news-image-hint">Нажмите, чтобы выбрать файл,<br>или вставьте картинку из буфера обмена (Ctrl+V)</p>
+                            </div>
+                            <div class="news-image-actions">
+                                <button type="button" id="newsImageAttachBtn" class="btn btn-neutral btn-sm">
+                                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                                    Прикрепить файл
+                                </button>
+                                <button type="button" id="newsImageClearBtn" class="btn btn-danger btn-sm" style="display: none;">
+                                    Убрать
+                                </button>
+                            </div>
+                        </div>
+                        <input type="file" id="newsImageFile" accept="image/*" hidden>
+                        <span class="form-hint">Необязательно. Поддерживается вставка из буфера (Ctrl+V) или выбор файла с компьютера.</span>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <label for="newsText">Текст новости *</label>
+                        <textarea id="newsText" name="text" required placeholder="Полный текст новости..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-accent">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        Опубликовать
+                    </button>
+                </form>
+            </div>
+
+            <div class="admin-header">
+                <h2>Все новости</h2>
+            </div>
+            <div id="adminNewsList"></div>
+        </div>
+
+        <!-- ВКЛАДКА: ЗАПИСИ -->
+        <div id="tab-appointments" class="admin-content">
+            <div class="admin-header">
+                <h2>Записи на приём</h2>
+                <button class="btn btn-danger btn-sm" onclick="clearAppointments()">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    Очистить все
+                </button>
+            </div>
+            <div id="adminAppointmentsList"></div>
+        </div>
+
+        <!-- ВКЛАДКА: ПРОБЛЕМЫ -->
+        <div id="tab-problems" class="admin-content">
+            <div class="admin-header">
+                <h2>Жалобы и проблемы граждан</h2>
+                <button class="btn btn-danger btn-sm" onclick="clearProblems()">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    Очистить все
+                </button>
+            </div>
+            <div id="adminProblemsList"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ==================== МОДАЛЬНЫЕ ОКНА ==================== -->
+<div class="modal-overlay" id="serviceModal">
+    <div class="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" onclick="closeModal('serviceModal')" aria-label="Закрыть">&times;</button>
+        <h3 id="modalTitle">Услуга</h3>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="problemModal">
+    <div class="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" onclick="closeModal('problemModal')" aria-label="Закрыть">&times;</button>
+        <h3>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Сообщить о проблеме
+        </h3>
+        <form id="problemForm">
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label for="problemType">Тип проблемы *</label>
+                <select id="problemType" name="type" required>
+                    <option value="">— Выберите тип —</option>
+                    <option>🚧 Яма на дороге</option>
+                    <option>💡 Не горит фонарь</option>
+                    <option>🗑️ Мусор / несвоевременный вывоз</option>
+                    <option>💧 Прорыв трубы / авария ЖКХ</option>
+                    <option>🌳 Аварийное дерево</option>
+                    <option>🚏 Остановка / павильон</option>
+                    <option>🛑 Другое</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label for="problemDesc">Описание *</label>
+                <textarea id="problemDesc" name="description" required placeholder="Опишите проблему подробнее..."></textarea>
+            </div>
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label for="problemAuthor">Ваше имя</label>
+                <input type="text" id="problemAuthor" name="author" placeholder="Можно оставить анонимно">
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px;">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Координаты: <span id="coordsDisplay">—</span>
+            </p>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Отправить сообщение
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- ==================== УВЕДОМЛЕНИЕ ==================== -->
+<div class="toast" id="toast" role="status" aria-live="polite">Готово!</div>
+
+<!-- ==================== ПОДВАЛ ==================== -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Октябрьский райисполком</h4>
+                <p>
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    247319, Гомельская обл., г.п. Октябрьский, ул. Советская, 57
+                </p>
+                <p>
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    (8-02357) 3 84 10
+                </p>
+                <p>
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    oktrik2@oktiabrskiy.gomel-region.by
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Разделы</h4>
+                <a onclick="scrollToSection('leadership')">Руководство</a>
+                <a onclick="scrollToSection('news')">Новости района</a>
+                <a onclick="scrollToSection('services')">Услуги</a>
+                <a onclick="scrollToSection('appointment')">Запись на приём</a>
+                <a onclick="scrollToSection('map-section')">Карта проблем</a>
+            </div>
+            <div class="footer-col">
+                <h4>График работы</h4>
+                <p>Пн–Пт: 8:00 – 17:30</p>
+                <p>Обед: 13:00 – 14:00</p>
+                <p>Сб, Вс — выходные</p>
+                <p>Личный приём: по графику</p>
+            </div>
+            <div class="footer-col">
+                <h4>Полезные ссылки</h4>
+                <a href="https://gomel-region.by" target="_blank" rel="noopener">Гомельский облисполком</a>
+                <a href="https://pravo.by" target="_blank" rel="noopener">Национальный правовой портал</a>
+                <a onclick="showLogin()">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Вход для сотрудников
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Октябрьский районный исполнительный комитет. Демонстрационный портал для учебной практики.
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== LEAFLET ==================== -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+/* ============================================================
+   ХРАНИЛИЩЕ ДАННЫХ
+   ============================================================ */
+const DB = {
+    getNews() {
+        let news = JSON.parse(localStorage.getItem('okt_news_v5') || 'null');
+        if (!news) {
+            news = [
+                { id: 1, icon: '🚜', image: 'news7.jpg', date: '15.05.2025', title: 'Начало весенне-полевых работ в Октябрьском районе', text: 'Аграрии Октябрьского района приступили к весеннему севу. В этом году планируется засеять более 12 тысяч гектаров зерновыми и зернобобовыми культурами.', created: new Date().toISOString() },
+                { id: 2, icon: '🏫', image: 'news6.jpg', date: '12.05.2025', title: 'Ремонт Октябрьской средней школы №1', text: 'В рамках программы развития регионов начат капитальный ремонт здания школы. Обновление включает замену кровли, окон и модернизацию спортивного зала.', created: new Date().toISOString() },
+                { id: 3, icon: '🌳', image: 'news5.jpg', date: '10.05.2025', title: 'Акция «Посади дерево» в Октябрьском', text: 'Жителей г.п. Октябрьский приглашают принять участие в озеленении центрального парка. Саженцы липы и клёна предоставляются бесплатно.', created: new Date().toISOString() },
+                { id: 4, icon: '💼', image: 'news4.jpg', date: '08.05.2025', title: 'Ярмарка вакансий в Октябрьском районе', text: '25 мая в районном Доме культуры пройдёт ярмарка вакансий. Предприятия района представят более 40 свободных рабочих мест.', created: new Date().toISOString() },
+                { id: 5, icon: '🏥', image: 'news3.jpg', date: '06.05.2025', title: 'Диспансеризация в Октябрьской ЦРБ', text: 'В центральной районной больнице проходит бесплатная диспансеризация взрослого населения. Запись по телефону регистратуры.', created: new Date().toISOString() },
+                { id: 6, icon: '🚌', image: 'news2.jpg', date: '04.05.2025', title: 'Новый автобусный маршрут', text: 'С 1 июня запускается новый маршрут №4, соединяющий центр г.п. Октябрьский с агрогородком Любань.', created: new Date().toISOString() },
+                { id: 7, icon: '💧', image: 'news1.jpg', date: '02.05.2025', title: 'Реконструкция системы водоснабжения', text: 'В Октябрьском начата реконструкция водопроводных сетей. Работы позволят улучшить качество воды для более 3000 жителей.', created: new Date().toISOString() }
+            ];
+            localStorage.setItem('okt_news_v5', JSON.stringify(news));
+        }
+        return news;
+    },
+    saveNews(n) { localStorage.setItem('okt_news_v5', JSON.stringify(n)); },
+    getAppointments() { return JSON.parse(localStorage.getItem('okt_appointments') || '[]'); },
+    saveAppointments(n) { localStorage.setItem('okt_appointments', JSON.stringify(n)); },
+    getProblems() { return JSON.parse(localStorage.getItem('okt_problems') || '[]'); },
+    saveProblems(n) { localStorage.setItem('okt_problems', JSON.stringify(n)); },
+    isAdmin() { return sessionStorage.getItem('okt_admin') === '1'; },
+    login(l, p) {
+        if (l === 'admin' && p === 'admin123') {
+            sessionStorage.setItem('okt_admin', '1');
+            return true;
+        }
+        return false;
+    },
+    logout() { sessionStorage.removeItem('okt_admin'); }
+};
+
+/* ============================================================
+   НАВИГАЦИЯ
+   ============================================================ */
+function renderNav() {
+    const nav = document.getElementById('mainNav');
+    if (DB.isAdmin()) {
+        nav.innerHTML = `
+            <li><a class="nav-auth active" onclick="showAdmin()">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                Админ-панель
+            </a></li>
+            <li><a onclick="scrollToSection('leadership')">Руководство</a></li>
+            <li><a onclick="scrollToSection('news')">Новости</a></li>
+            <li><a onclick="scrollToSection('appointment')">Приём</a></li>
+            <li><a onclick="scrollToSection('map-section')">Карта</a></li>
+            <li>
+                <div class="nav-user">
+                    <span class="user-badge">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        admin
+                    </span>
+                    <button class="logout-btn" onclick="doLogout()">Выйти</button>
+                </div>
+            </li>
+        `;
+    } else {
+        nav.innerHTML = `
+            <li><a onclick="scrollToSection('leadership')">Руководство</a></li>
+            <li><a onclick="scrollToSection('news')">Новости</a></li>
+            <li><a onclick="scrollToSection('services')">Услуги</a></li>
+            <li><a onclick="scrollToSection('appointment')">Запись на приём</a></li>
+            <li><a onclick="scrollToSection('map-section')">Карта проблем</a></li>
+            <li><a class="nav-auth" onclick="showLogin()">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Вход для сотрудников
+            </a></li>
+        `;
+    }
+}
+
+function scrollToSection(id) {
+    if (document.getElementById('publicSite').style.display === 'none') {
+        showPublic();
+    }
+    setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
+}
+
+/* ============================================================
+   ПЕРЕКЛЮЧЕНИЕ ЭКРАНОВ
+   ============================================================ */
+function showPublic() {
+    document.getElementById('publicSite').style.display = 'block';
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('adminPanel').classList.remove('active');
+    renderNews();
+    renderServices();
+    renderNav();
+    setTimeout(() => {
+        if (!map) initMap();
+        else {
+            map.invalidateSize();
+            renderProblems();
+        }
+        observeReveals();
+    }, 80);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showLogin() {
+    document.getElementById('publicSite').style.display = 'none';
+    document.getElementById('adminPanel').classList.remove('active');
+    document.getElementById('loginScreen').style.display = 'flex';
+    renderNav();
+    window.scrollTo({ top: 0 });
+}
+
+function showAdmin() {
+    if (!DB.isAdmin()) return showLogin();
+    document.getElementById('publicSite').style.display = 'none';
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('adminPanel').classList.add('active');
+    renderNav();
+    renderAdmin();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function doLogout() {
+    DB.logout();
+    showToast('Вы вышли из системы', 'var(--text-muted)');
+    showPublic();
+}
+
+/* ============================================================
+   ЛОГИН
+   ============================================================ */
+document.getElementById('loginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const login = data.get('login').trim();
+    const password = data.get('password');
+
+    if (DB.login(login, password)) {
+        showToast('Добро пожаловать, администратор!');
+        e.target.reset();
+        showAdmin();
+    } else {
+        showToast('Неверный логин или пароль', 'var(--danger)');
+    }
+});
+
+/* ============================================================
+   УВЕДОМЛЕНИЯ
+   ============================================================ */
+function showToast(message, color = 'var(--success)') {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.style.background = color;
+    toast.classList.add('show');
+    clearTimeout(window._toastTimer);
+    window._toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+/* ============================================================
+   МОДАЛЬНЫЕ ОКНА
+   ============================================================ */
+function openModal(id) { document.getElementById(id).classList.add('active'); }
+function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.classList.remove('active');
+    });
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(o => o.classList.remove('active'));
+    }
+});
+
+/* ============================================================
+   НОВОСТИ
+   ============================================================ */
+function renderNews() {
+    const news = DB.getNews();
+    const grid = document.getElementById('newsGrid');
+    if (!grid) return;
+
+    if (news.length === 0) {
+        grid.innerHTML = `<div class="empty-state" style="grid-column: 1/-1;">
+            <div class="icon-box">
+                <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+            </div>
+            <p>Пока нет новостей</p>
+        </div>`;
+        return;
+    }
+
+    const sorted = [...news].reverse();
+    grid.innerHTML = sorted.map(n => `
+        <article class="news-card">
+            <div class="news-img">
+                <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8z"/></svg>
+                ${n.image ? `<img src="${escapeHtml(n.image)}" alt="${escapeHtml(n.title)}" loading="lazy" onerror="this.style.display='none'">` : ''}
+            </div>
+            <div class="news-body">
+                <div class="news-date">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    ${escapeHtml(n.date)}
+                </div>
+                <h3>${escapeHtml(n.title)}</h3>
+                <p>${escapeHtml(n.text)}</p>
+            </div>
+        </article>
+    `).join('');
+}
+
+/* ============================================================
+   УСЛУГИ
+   ============================================================ */
+const servicesData = [
+    { title: 'Регистрация по месту жительства', desc: 'Оформление прописки и выписки граждан в г.п. Октябрьский', time: '3 рабочих дня', dept: 'Отдел ЖКХ', docs: ['Паспорт гражданина', 'Заявление установленного образца', 'Документ на жилое помещение', 'Согласие собственника'] },
+    { title: 'Предоставление земельного участка', desc: 'Аренда или передача в собственность на территории района', time: '30 дней', dept: 'Отдел землеустройства', docs: ['Заявление', 'Паспорт', 'Схема участка', 'Кадастровый план'] },
+    { title: 'Назначение пособия на детей', desc: 'Государственная поддержка семей Октябрьского района', time: '10 дней', dept: 'Управление по труду', docs: ['Заявление', 'Паспорт', 'Свидетельство о рождении', 'Справка о доходах'] },
+    { title: 'Разрешение на строительство', desc: 'Оформление документации на застройку в районе', time: '15 дней', dept: 'Отдел архитектуры', docs: ['Заявление', 'Проектная документация', 'Правоустанавливающие документы на участок'] },
+    { title: 'Справка о составе семьи', desc: 'Выдача справок для оформления льгот и субсидий', time: '1 день', dept: 'Отдел ЖКХ', docs: ['Паспорт', 'Заявление', 'Домовая книга'] },
+    { title: 'Регистрация КФХ и ИП', desc: 'Поддержка малого бизнеса и фермерских хозяйств района', time: '5 дней', dept: 'Отдел экономики', docs: ['Заявление', 'Паспорт', 'Бизнес-план (для КФХ)'] },
+    { title: 'Архивная справка', desc: 'Выдача справок из архивных фондов района', time: '5 дней', dept: 'Архивный отдел', docs: ['Заявление', 'Паспорт', 'Документы, подтверждающие родство'] },
+    { title: 'Консультация юриста', desc: 'Бесплатная юридическая помощь жителям района', time: 'В день обращения', dept: 'Юридический отдел', docs: ['Паспорт', 'Документы по вопросу'] }
+];
+
+function renderServices() {
+    const grid = document.getElementById('servicesGrid');
+    if (!grid) return;
+    grid.innerHTML = servicesData.map((s, i) => `
+        <article class="service-card" onclick="openService(${i})" role="button" tabindex="0"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openService(${i});}">
+            <h3>${escapeHtml(s.title)}</h3>
+            <p>${escapeHtml(s.desc)}</p>
+            <div class="service-meta">
+                <span>
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    ${escapeHtml(s.time)}
+                </span>
+                <span>
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    ${escapeHtml(s.dept)}
+                </span>
+            </div>
+        </article>
+    `).join('');
+}
+
+function openService(index) {
+    const s = servicesData[index];
+    if (!s) return;
+    document.getElementById('modalTitle').textContent = s.title;
+    document.getElementById('modalContent').innerHTML = `
+        <p style="color: var(--text-muted); margin-bottom: 14px;">${escapeHtml(s.desc)}</p>
+        <p style="margin-bottom: 8px;"><strong>Срок оказания:</strong> ${escapeHtml(s.time)}</p>
+        <p style="margin-bottom: 14px;"><strong>Отдел:</strong> ${escapeHtml(s.dept)}</p>
+        <p style="margin-bottom: 8px;"><strong>Необходимые документы:</strong></p>
+        <ul style="padding-left: 20px; color: var(--text-soft); font-size: 13.5px;">
+            ${s.docs.map(d => `<li style="margin-bottom: 5px;">${escapeHtml(d)}</li>`).join('')}
+        </ul>
+        <button class="btn btn-primary" style="width:100%; margin-top: 20px;" onclick="closeModal('serviceModal'); scrollToSection('appointment');">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Записаться на приём
+        </button>
+    `;
+    openModal('serviceModal');
+}
+
+/* ============================================================
+   ФОРМА ЗАПИСИ
+   ============================================================ */
+function generateTimeSlots() {
+    const select = document.getElementById('timeSelect');
+    if (!select) return;
+    select.innerHTML = '<option value="">— Выберите время —</option>';
+    for (let h = 9; h <= 16; h++) {
+        if (h === 13) continue;
+        ['00', '30'].forEach(m => {
+            const time = `${String(h).padStart(2, '0')}:${m}`;
+            const opt = document.createElement('option');
+            opt.value = time;
+            opt.textContent = time;
+            select.appendChild(opt);
+        });
+    }
+}
+
+function setupDateLimit() {
+    const input = document.getElementById('dateInput');
+    if (!input) return;
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    input.min = tomorrow.toISOString().split('T')[0];
+
+    input.addEventListener('change', () => {
+        if (!input.value) return;
+        const d = new Date(input.value + 'T00:00:00');
+        if (d.getDay() === 0 || d.getDay() === 6) {
+            showToast('Приём только в будние дни', 'var(--warning)');
+            input.value = '';
+        }
+    });
+}
+
+document.getElementById('appointmentForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const record = {
+        id: Date.now(),
+        fio: data.get('fio').trim(),
+        phone: data.get('phone').trim(),
+        service: data.get('service'),
+        department: data.get('department'),
+        date: data.get('date'),
+        time: data.get('time'),
+        comment: (data.get('comment') || '').trim(),
+        created: new Date().toISOString(),
+        status: 'new'
+    };
+
+    const list = DB.getAppointments();
+    list.push(record);
+    DB.saveAppointments(list);
+
+    showToast(`Вы записаны на ${formatDate(record.date)} в ${record.time}`);
+    e.target.reset();
+    generateTimeSlots();
+    setupDateLimit();
+});
+
+/* ============================================================
+   КАРТА
+   ============================================================ */
+let map = null;
+let currentCoords = null;
+let problemMarkers = [];
+
+const problemTypes = {
+    '🚧 Яма на дороге': '#dc2626',
+    '💡 Не горит фонарь': '#f59e0b',
+    '🗑️ Мусор / несвоевременный вывоз': '#16a34a',
+    '💧 Прорыв трубы / авария ЖКХ': '#2563eb',
+    '🌳 Аварийное дерево': '#059669',
+    '🚏 Остановка / павильон': '#8b5cf6',
+    '🛑 Другое': '#6b7280'
+};
+
+function initMap() {
+    if (map) return;
+    const mapEl = document.getElementById('map');
+    if (!mapEl) return;
+
+    map = L.map('map', {
+        center: [52.6333, 28.8833],
+        zoom: 14,
+        zoomControl: true,
+        attributionControl: false
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19
+    }).addTo(map);
+
+    L.control.attribution({
+        prefix: false,
+        position: 'bottomright'
+    }).addTo(map).addAttribution(
+        'Данные карты: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+    );
+
+    map.on('click', (e) => {
+        if (DB.isAdmin()) {
+            showToast('Администратор не может добавлять проблемы', 'var(--warning)');
+            return;
+        }
+        currentCoords = e.latlng;
+        document.getElementById('coordsDisplay').textContent =
+            `${e.latlng.lat.toFixed(5)}, ${e.latlng.lng.toFixed(5)}`;
+        openModal('problemModal');
+    });
+
+    renderProblems();
+}
+
+function renderProblems() {
+    const problems = DB.getProblems();
+    const list = document.getElementById('problemsList');
+    if (!list) return;
+
+    if (map && problemMarkers.length) {
+        problemMarkers.forEach(m => map.removeLayer(m));
+    }
+    problemMarkers = [];
+
+    if (problems.length === 0) {
+        list.innerHTML = '<p style="color: var(--text-muted); font-size: 13px; text-align: center; padding: 20px 0;">Пока нет сообщений</p>';
+        return;
+    }
+
+    const sorted = [...problems].reverse();
+    list.innerHTML = sorted.map(p => `
+        <div class="problem-item ${p.status === 'done' ? 'resolved' : ''}">
+            <strong>${escapeHtml(p.type)}</strong>
+            <div style="color: var(--text-soft); margin: 4px 0;">${escapeHtml(p.description)}</div>
+            <small>${escapeHtml(p.author || 'Анонимно')} • ${formatDate(p.created)}</small>
+        </div>
+    `).join('');
+
+    if (!map) return;
+
+    problems.forEach(p => {
+        const color = problemTypes[p.type] || '#6b7280';
+        const icon = L.divIcon({
+            className: 'custom-marker',
+            html: `<div style="
+                background: ${color};
+                width: 20px; height: 20px;
+                border-radius: 50%;
+                border: 3px solid #fff;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+                ${p.status === 'done' ? 'opacity: 0.5;' : ''}
+            "></div>`,
+            iconSize: [20, 20],
+            iconAnchor: [10, 10]
+        });
+
+        const marker = L.marker([p.lat, p.lng], { icon })
+            .addTo(map)
+            .bindPopup(`
+                <div style="font-family: inherit; min-width: 180px;">
+                    <strong style="color: ${color};">${escapeHtml(p.type)}</strong><br>
+                    <p style="margin: 6px 0; font-size: 13px;">${escapeHtml(p.description)}</p>
+                    <small style="color: #6b7280;">${escapeHtml(p.author || 'Анонимно')}</small>
+                </div>
+            `);
+
+        problemMarkers.push(marker);
+    });
+}
+
+document.getElementById('problemForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!currentCoords) {
+        showToast('Координаты не выбраны', 'var(--warning)');
+        return;
+    }
+
+    const data = new FormData(e.target);
+    const problem = {
+        id: Date.now(),
+        type: data.get('type'),
+        description: data.get('description').trim(),
+        author: (data.get('author') || '').trim() || 'Анонимно',
+        lat: currentCoords.lat,
+        lng: currentCoords.lng,
+        created: new Date().toISOString(),
+        status: 'new'
+    };
+
+    const list = DB.getProblems();
+    list.push(problem);
+    DB.saveProblems(list);
+
+    closeModal('problemModal');
+    showToast('Спасибо! Ваше сообщение принято');
+    e.target.reset();
+    currentCoords = null;
+
+    renderProblems();
+    if (document.getElementById('adminPanel').classList.contains('active')) {
+        renderAdminProblems();
+        renderStats();
+    }
+});
+
+/* ============================================================
+   АДМИН-ПАНЕЛЬ
+   ============================================================ */
+function switchTab(name, btn) {
+    document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.admin-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + name).classList.add('active');
+}
+
+function renderAdmin() {
+    renderStats();
+    renderAdminNews();
+    renderAdminAppointments();
+    renderAdminProblems();
+}
+
+function renderStats() {
+    document.getElementById('statNews').textContent = DB.getNews().length;
+    document.getElementById('statAppointments').textContent = DB.getAppointments().length;
+    const problems = DB.getProblems();
+    document.getElementById('statProblems').textContent = problems.length;
+    document.getElementById('statNewProblems').textContent =
+        problems.filter(p => p.status === 'new').length;
+}
+
+/* --- НОВОСТИ: загрузка изображения (файл / вставка) --- */
+let newsImageData = null;
+
+function compressImage(dataUrl, callback) {
+    const img = new Image();
+    img.onload = () => {
+        const maxW = 1000, maxH = 700;
+        let { width, height } = img;
+        if (width > maxW || height > maxH) {
+            const ratio = Math.min(maxW / width, maxH / height);
+            width = Math.round(width * ratio);
+            height = Math.round(height * ratio);
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, width, height);
+        try {
+            callback(canvas.toDataURL('image/jpeg', 0.82));
+        } catch (err) {
+            callback(dataUrl);
+        }
+    };
+    img.onerror = () => callback(dataUrl);
+    img.src = dataUrl;
+}
+
+function setupNewsImage() {
+    const zone = document.getElementById('newsImageZone');
+    const fileInput = document.getElementById('newsImageFile');
+    const attachBtn = document.getElementById('newsImageAttachBtn');
+    const clearBtn = document.getElementById('newsImageClearBtn');
+    const preview = document.getElementById('newsImagePreview');
+    const previewImg = document.getElementById('newsImagePreviewImg');
+    const placeholder = document.getElementById('newsImagePlaceholder');
+    if (!zone || !fileInput) return;
+
+    function showPreview(dataUrl) {
+        newsImageData = dataUrl;
+        previewImg.src = dataUrl;
+        preview.style.display = 'block';
+        placeholder.style.display = 'none';
+        clearBtn.style.display = 'inline-flex';
+    }
+    function clearImage() {
+        newsImageData = null;
+        previewImg.removeAttribute('src');
+        preview.style.display = 'none';
+        placeholder.style.display = 'block';
+        clearBtn.style.display = 'none';
+        fileInput.value = '';
+    }
+
+    attachBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.click();
+    });
+    zone.addEventListener('click', () => fileInput.click());
+    clearBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        clearImage();
+    });
+
+    fileInput.addEventListener('change', () => {
+        const file = fileInput.files[0];
+        if (!file) return;
+        if (!file.type.startsWith('image/')) {
+            showToast('Выберите файл-изображение', 'var(--warning)');
+            return;
+        }
+        const reader = new FileReader();
+        reader.onload = (ev) => compressImage(ev.target.result, showPreview);
+        reader.readAsDataURL(file);
+    });
+
+    document.addEventListener('paste', (e) => {
+        if (!DB.isAdmin()) return;
+        const adminPanel = document.getElementById('adminPanel');
+        if (!adminPanel.classList.contains('active')) return;
+        const newsTab = document.getElementById('tab-news');
+        if (!newsTab.classList.contains('active')) return;
+        const items = e.clipboardData && e.clipboardData.items;
+        if (!items) return;
+        for (const item of items) {
+            if (item.type.startsWith('image/')) {
+                const file = item.getAsFile();
+                if (!file) continue;
+                e.preventDefault();
+                const reader = new FileReader();
+                reader.onload = (ev) => compressImage(ev.target.result, showPreview);
+                reader.readAsDataURL(file);
+                return;
+            }
+        }
+    });
+
+    window._resetNewsImage = clearImage;
+    window._getNewsImageData = () => newsImageData;
+}
+
+document.getElementById('newsForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const now = new Date();
+    const iconVal = (data.get('icon') || '').trim() || '📢';
+    const imageVal = window._getNewsImageData ? window._getNewsImageData() : '';
+
+    const news = DB.getNews();
+    news.push({
+        id: Date.now(),
+        title: data.get('title').trim(),
+        text: data.get('text').trim(),
+        icon: iconVal,
+        image: imageVal || null,
+        date: now.toLocaleDateString('ru-RU'),
+        created: now.toISOString()
+    });
+    DB.saveNews(news);
+
+    showToast('Новость опубликована');
+    e.target.reset();
+    document.getElementById('newsIcon').value = '📢';
+    if (window._resetNewsImage) window._resetNewsImage();
+    renderAdminNews();
+    renderStats();
+    renderNews();
+});
+
+function renderAdminNews() {
+    const news = DB.getNews();
+    const box = document.getElementById('adminNewsList');
+    if (!box) return;
+
+    if (news.length === 0) {
+        box.innerHTML = `<div class="table-wrapper"><div class="empty-state">
+            <div class="icon-box">
+                <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+            </div>
+            <p>Новостей пока нет</p>
+        </div></div>`;
+        return;
+    }
+
+    const sorted = [...news].reverse();
+    box.innerHTML = `
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 60px;">Фото</th>
+                        <th>Заголовок</th>
+                        <th style="width: 120px;">Дата</th>
+                        <th style="width: 110px;">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${sorted.map(n => `
+                        <tr>
+                            <td>
+                                ${n.image
+                                    ? `<img src="${escapeHtml(n.image)}" alt="" class="admin-news-thumb" onerror="this.outerHTML='<div class=\\'admin-news-no-img\\'>—</div>'">`
+                                    : `<div class="admin-news-no-img" title="Без изображения">${escapeHtml(n.icon || '📢')}</div>`
+                                }
+                            </td>
+                            <td>
+                                <strong>${escapeHtml(n.title)}</strong><br>
+                                <small style="color: var(--text-muted);">${escapeHtml(n.text.substring(0, 100))}${n.text.length > 100 ? '...' : ''}</small>
+                            </td>
+                            <td>${escapeHtml(n.date)}</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" onclick="deleteNews(${n.id})">Удалить</button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
+}
+
+function deleteNews(id) {
+    if (!confirm('Удалить эту новость?')) return;
+    DB.saveNews(DB.getNews().filter(n => n.id !== id));
+    showToast('Новость удалена', 'var(--warning)');
+    renderAdminNews();
+    renderStats();
+    renderNews();
+}
+
+/* --- Записи в админке --- */
+function renderAdminAppointments() {
+    const list = DB.getAppointments();
+    const box = document.getElementById('adminAppointmentsList');
+    if (!box) return;
+
+    if (list.length === 0) {
+        box.innerHTML = `<div class="table-wrapper"><div class="empty-state">
+            <div class="icon-box">
+                <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <p>Записей на приём пока нет</p>
+        </div></div>`;
+        return;
+    }
+
+    const sorted = [...list].reverse();
+    box.innerHTML = `
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ФИО</th>
+                        <th>Телефон</th>
+                        <th>Услуга</th>
+                        <th>Отдел</th>
+                        <th>Дата / Время</th>
+                        <th>Комментарий</th>
+                        <th style="width: 80px;">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${sorted.map(a => `
+                        <tr>
+                            <td><strong>${escapeHtml(a.fio)}</strong></td>
+                            <td>${escapeHtml(a.phone)}</td>
+                            <td>${escapeHtml(a.service)}</td>
+                            <td><small>${escapeHtml(a.department)}</small></td>
+                            <td><strong>${formatDate(a.date)}</strong><br><small>${escapeHtml(a.time)}</small></td>
+                            <td><small>${escapeHtml(a.comment || '—')}</small></td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" onclick="deleteAppointment(${a.id})" title="Удалить">Удалить</button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
+}
+
+function deleteAppointment(id) {
+    if (!confirm('Удалить эту запись?')) return;
+    DB.saveAppointments(DB.getAppointments().filter(a => a.id !== id));
+    showToast('Запись удалена', 'var(--warning)');
+    renderAdminAppointments();
+    renderStats();
+}
+
+function clearAppointments() {
+    if (!confirm('Удалить ВСЕ записи на приём? Это действие необратимо.')) return;
+    DB.saveAppointments([]);
+    showToast('Все записи удалены', 'var(--warning)');
+    renderAdminAppointments();
+    renderStats();
+}
+
+/* --- Проблемы в админке --- */
+function renderAdminProblems() {
+    const list = DB.getProblems();
+    const box = document.getElementById('adminProblemsList');
+    if (!box) return;
+
+    if (list.length === 0) {
+        box.innerHTML = `<div class="table-wrapper"><div class="empty-state">
+            <div class="icon-box">
+                <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <p>Сообщений о проблемах пока нет</p>
+        </div></div>`;
+        return;
+    }
+
+    const sorted = [...list].reverse();
+    box.innerHTML = `
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Тип</th>
+                        <th>Описание</th>
+                        <th>Автор</th>
+                        <th>Дата</th>
+                        <th>Координаты</th>
+                        <th>Статус</th>
+                        <th style="width: 180px;">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${sorted.map(p => `
+                        <tr>
+                            <td><strong>${escapeHtml(p.type)}</strong></td>
+                            <td><small>${escapeHtml(p.description)}</small></td>
+                            <td>${escapeHtml(p.author || 'Анонимно')}</td>
+                            <td><small>${formatDate(p.created)}</small></td>
+                            <td><small style="color: var(--text-muted);">${p.lat.toFixed(4)}, ${p.lng.toFixed(4)}</small></td>
+                            <td>${statusBadge(p.status)}</td>
+                            <td>
+                                ${p.status !== 'done'
+                                    ? `<button class="btn btn-success btn-sm" onclick="setProblemStatus(${p.id}, 'done')">Решено</button>`
+                                    : `<button class="btn btn-neutral btn-sm" onclick="setProblemStatus(${p.id}, 'new')">Вернуть</button>`
+                                }
+                                <button class="btn btn-danger btn-sm" onclick="deleteProblem(${p.id})" title="Удалить">Удалить</button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
+}
+
+function setProblemStatus(id, status) {
+    const list = DB.getProblems();
+    const p = list.find(x => x.id === id);
+    if (!p) return;
+    p.status = status;
+    DB.saveProblems(list);
+    showToast(status === 'done' ? 'Отмечено как решённое' : 'Возвращено в работу',
+        status === 'done' ? 'var(--success)' : 'var(--warning)');
+    renderAdminProblems();
+    renderStats();
+    renderProblems();
+}
+
+function deleteProblem(id) {
+    if (!confirm('Удалить это сообщение?')) return;
+    DB.saveProblems(DB.getProblems().filter(p => p.id !== id));
+    showToast('Сообщение удалено', 'var(--warning)');
+    renderAdminProblems();
+    renderStats();
+    renderProblems();
+}
+
+function clearProblems() {
+    if (!confirm('Удалить ВСЕ сообщения о проблемах?')) return;
+    DB.saveProblems([]);
+    showToast('Все сообщения удалены', 'var(--warning)');
+    renderAdminProblems();
+    renderStats();
+    renderProblems();
+}
+
+/* ============================================================
+   УТИЛИТЫ
+   ============================================================ */
+function escapeHtml(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
+function formatDate(dateStr) {
+    if (!dateStr) return '';
+    if (typeof dateStr === 'string' && dateStr.includes('T')) {
+        return new Date(dateStr).toLocaleDateString('ru-RU');
+    }
+    if (typeof dateStr === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+        const [y, m, d] = dateStr.split('-');
+        return `${d}.${m}.${y}`;
+    }
+    return dateStr;
+}
+
+function statusBadge(status) {
+    if (status === 'done') return '<span class="badge badge-done">Решено</span>';
+    if (status === 'work') return '<span class="badge badge-work">В работе</span>';
+    return '<span class="badge badge-new">Новое</span>';
+}
+
+/* ============================================================
+   АНИМАЦИЯ ПОЯВЛЕНИЯ СЕКЦИЙ
+   ============================================================ */
+let revealObserver = null;
+function observeReveals() {
+    if (revealObserver) revealObserver.disconnect();
+    if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+        return;
+    }
+    revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObserver.observe(el));
+}
+
+/* ============================================================
+   ИНИЦИАЛИЗАЦИЯ
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+    generateTimeSlots();
+    setupDateLimit();
+    setupNewsImage();
+
+    if (DB.isAdmin()) {
+        showAdmin();
+    } else {
+        showPublic();
+    }
+
+    observeReveals();
+
+    const publicSite = document.getElementById('publicSite');
+    if (publicSite) {
+        const observer = new MutationObserver(() => {
+            if (publicSite.style.display !== 'none') {
+                setTimeout(() => {
+                    if (!map) initMap();
+                    else {
+                        map.invalidateSize();
+                        renderProblems();
+                    }
+                    observeReveals();
+                }, 120);
+            }
+        });
+        observer.observe(publicSite, { attributes: true, attributeFilter: ['style'] });
+    }
+});
+</script>
+
+</body>
+</html>
